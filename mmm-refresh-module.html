@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MMM Refresh Module</title>
+<style>
+:root{--bg:#f7f7f5;--fg:#1b1b1a;--mut:#5d5d58;--card:#fff;--line:#deded8;--acc:#1f6feb;--acc2:#c2410c;--ok:#15803d;--warn:#a16207}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141413;--fg:#ececea;--mut:#a3a39c;--card:#1d1d1b;--line:#33332f;--acc:#6ea8ff;--acc2:#fb923c;--ok:#4ade80;--warn:#facc15}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header,main{max-width:1000px;margin:0 auto;padding:0 16px}
+header{padding-top:32px}
+h1{font-size:1.8rem;margin:0 0 4px}h2{font-size:1.35rem;margin:40px 0 8px;padding-top:8px;border-top:1px solid var(--line)}h3{font-size:1.05rem;margin:0 0 6px}
+p{margin:6px 0}.mut{color:var(--mut);font-size:.92rem}
+nav{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+nav div{max-width:1000px;margin:0 auto;padding:8px 16px;display:flex;gap:14px;overflow-x:auto;white-space:nowrap}
+nav a{color:var(--acc);text-decoration:none;font-size:.9rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
+.tag{display:inline-block;font-size:.72rem;padding:1px 8px;border-radius:99px;border:1px solid var(--line);color:var(--mut);margin-right:4px}
+.tag.src{color:var(--ok);border-color:var(--ok)}.tag.syn{color:var(--warn);border-color:var(--warn)}
+table{width:100%;border-collapse:collapse;font-size:.9rem;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)}
+.tw{overflow-x:auto}
+pre{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px;overflow-x:auto;font-size:.82rem;line-height:1.45}
+a{color:var(--acc)}
+svg{width:100%;height:auto;display:block}
+svg text{fill:var(--fg);font-size:11px;font-family:inherit}svg .m{fill:var(--mut)}
+.ax{stroke:var(--mut);stroke-width:1}.grd{stroke:var(--line)}
+label{font-size:.88rem;display:block;margin-top:8px}
+input[type=range]{width:100%}
+.big{font-size:1.5rem;font-weight:600}
+.note{border-left:3px solid var(--warn);padding:6px 12px;background:var(--card);margin:12px 0;font-size:.92rem}
+</style>
+</head>
+<body>
+<nav><div><a href="#a">Answer</a><a href="#cases">1 Case studies</a><a href="#concepts">2 Core concepts</a><a href="#tools">3 Tool map</a><a href="#demos">3b Demos</a><a href="#sched">Schedule</a><a href="#src">Sources</a></div></nav>
+<header>
+<h1>MMM Refresh Module: client briefs to senior skills</h1>
+<p class="mut">Built 4 Oct 2026 for the Oct–Nov plan. Tags: <span class="tag src">sourced</span> from a published page or talk, <span class="tag syn">synthesis</span> my judgement from common practice, not a cited fact.</p>
+</header>
+<main>
+
+<section id="a">
+<h2>Is this in the weekday plan already?</h2>
+<p>Only partly. Weeks 2–3 of <code>mmm-netherlands-action-plan.md</code> cover generic fundamentals (adstock, saturation, priors, calibration, optimisation). They do not cover client briefs, case studies, or answering business questions with dashboards. This module fills that gap and is slotted into weeks 2–4 below.</p>
+<div class="note"><strong>Evidence limit.</strong> Public case studies are mostly vendor marketing. I found no Netherlands-specific MMM case with a published brief, method and result, and no MMM-specific Effie NL entry. Objective Platform lists Dutch-region telecom, consumer goods and energy clients but publishes testimonials, not figures. Treat the figures below as <em>reported by the source</em>, not independently verified. Your best NL source is the Effie NL case library (methodology sections) and direct conversations from the networking track.</div>
+</section>
+
+<section id="cases">
+<h2>1. Client requests and published cases</h2>
+<div class="tw"><table>
+<thead><tr><th>Case</th><th>Client request</th><th>Delivery / method</th><th>Outcome (as reported)</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td>National public-sector recruitment body (Gain Theory) <span class="tag src">sourced</span></td><td>Judge every media channel; inform budget allocation and efficiency; find true drivers of interest.</td><td>10+ distinct models, one per recruitment strand, to isolate drivers of expressions of interest.</td><td>Budget moved away from weak activity to proven growth channels, incl. social.</td><td><a href="https://gaintheory.com/case-study/using-mmm-to-drive-recruitment-efficiency-for-a-national-public-sector-body/">Gain Theory</a></td></tr>
+<tr><td>National big-box retailer (Measured roundup) <span class="tag src">sourced</span></td><td>Is CTV worth it versus linear TV?</td><td>Compared incremental sales per GRP by channel.</td><td>CTV gave equal incremental sales per GRP at 40% lower cost; 20% of linear budget moved to CTV; efficiency 1.3x.</td><td><a href="https://www.measured.com/faq/real-life-media-mix-modeling-mmm-examples-true-incrementality/">Measured</a></td></tr>
+<tr><td>Unilever (Measured roundup) <span class="tag src">sourced</span></td><td>Allocate a very large budget across ~190 countries.</td><td>MMM-driven reallocation of 10% of spend.</td><td>Reported $500M incremental revenue. Large claim; secondary source.</td><td><a href="https://www.measured.com/faq/real-life-media-mix-modeling-mmm-examples-true-incrementality/">Measured</a></td></tr>
+<tr><td>Cassandra app client <span class="tag src">sourced</span></td><td>More conversions without more budget.</td><td>MMM-guided mix change.</td><td>+13% conversions at the same budget.</td><td><a href="https://cassandra.app/resources/mmm-case-study-13-in-conversions-with-the-same-budget-invested">Cassandra</a></td></tr>
+<tr><td>US bank (Quantzig) <span class="tag src">sourced</span></td><td>Defend market share; allocate budget; improve acquisition and loyalty.</td><td>MMM across channels.</td><td>+20% marketing efficiency, +15% acquisition, +10% brand perception/loyalty. Vendor claim.</td><td><a href="https://www.quantzig.com/case-studies/marketing-mix-modeling-helps-banking-industry/">Quantzig</a></td></tr>
+<tr><td>"Everline Foods" (Meridian demo, simulated data) <span class="tag src">sourced</span></td><td>Where should extra spend go? (CPG-style, 104 weeks, 5 channels, price, promo, seasonality)</td><td>Meridian Bayesian model; full-posterior scenario analysis.</td><td>Shifting 15% of display to online video: +$2.6M expected, 90% interval $1.9M–$3.2M. Simulated, so a teaching example only.</td><td><a href="https://github.com/matthewkaran33/mmm-case-study">GitHub</a></td></tr>
+<tr><td>Beverage manufacturer (Google Meridian material) <span class="tag src">sourced</span></td><td>Return on YouTube/TV campaigns.</td><td>Meridian.</td><td>About 10% ROI improvement.</td><td><a href="https://business.google.com/en-all/think/measurement/google-meridian-marketing-mix-modelling/">Think with Google</a></td></tr>
+<tr><td>Bolt (ride-hailing) <span class="tag src">sourced</span></td><td>Build an in-house MMM.</td><td>Evaluated approaches, chose PyMC. Talk covers the evolution.</td><td>No figures found. Find the talk on the PyMC Labs channels.</td><td><a href="https://pymc-marketing.readthedocs.io/en/latest/guide/mmm/resources.html">PyMC-Marketing resources</a></td></tr>
+<tr><td>Dutch-region clients of Objective Platform (telco, FMCG, energy) <span class="tag src">sourced</span></td><td>Centralise data; allocate budget; improve ROAS.</td><td>SaaS platform with dashboards.</td><td>Testimonials only, no figures.</td><td><a href="https://www.objectiveplatform.com/">Objective Platform</a></td></tr>
+</tbody></table></div>
+<h3 style="margin-top:18px">Recurring brief patterns</h3>
+<div class="grid">
+<div class="card"><h3>"Where should the next euro go?"</h3><p>Most common brief across every case above. <span class="tag syn">synthesis</span></p></div>
+<div class="card"><h3>"Is channel X worth it?"</h3><p>CTV vs linear, social vs search, YouTube/TV return.</p></div>
+<div class="card"><h3>"Same budget, better result"</h3><p>Cassandra, bank and retailer cases.</p></div>
+<div class="card"><h3>"Can we trust it?"</h3><p>Calibration with experiments (Meridian and PyMC-Marketing both support lift-test calibration).</p></div>
+<div class="card"><h3>"Build it in-house"</h3><p>Bolt; Meridian's pitch is in-house teams.</p></div>
+<div class="card"><h3>"Show uncertainty"</h3><p>Everline: decisions with intervals, not point estimates.</p></div>
+</div>
+</section>
+
+<section id="concepts">
+<h2>2. Core concepts for a senior MMM professional (NL market)</h2>
+<p class="mut">Derived from the patterns above. The NL-specific points are <span class="tag syn">synthesis</span>; validate them in conversations with Dutch practitioners.</p>
+<div class="tw"><table>
+<thead><tr><th>#</th><th>Concept</th><th>What a senior can do</th><th>Triggered by brief</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Budget scenarios and optimisation</td><td>Build constrained scenarios (flat budget, +10%, −10%, minimum channel floors), report intervals, not single numbers.</td><td>"Where should the next euro go?"</td></tr>
+<tr><td>2</td><td>Response curves and saturation</td><td>Explain marginal vs average ROI; identify headroom per channel.</td><td>"Is X worth it?"</td></tr>
+<tr><td>3</td><td>Triangulation / combined measurement</td><td>Calibrate MMM with lift or geo tests; reconcile with attribution.</td><td>"Can we trust it?"</td></tr>
+<tr><td>4</td><td>Short- vs long-term and brand effects</td><td>Separate base from incremental; model carryover; defend brand spend.</td><td>Brand-led advertisers, Effie-style cases</td></tr>
+<tr><td>5</td><td>Bayesian priors and uncertainty communication</td><td>Choose priors, run prior predictive checks, translate to risk language for a CMO.</td><td>"Show uncertainty"</td></tr>
+<tr><td>6</td><td>Small-market data design</td><td>NL is a small country, so geo variation is limited; plan national time-series models with informative priors and well-designed tests.</td><td>Any NL national advertiser</td></tr>
+<tr><td>7</td><td>Non-media drivers</td><td>Price, promo, seasonality, competitors, macro; avoid crediting media for them.</td><td>Retail and FMCG</td></tr>
+<tr><td>8</td><td>Model governance and refresh cadence</td><td>Validation, holdout tests, stability checks, monthly/quarterly refresh, versioning.</td><td>In-house builds</td></tr>
+<tr><td>9</td><td>Privacy and data constraints</td><td>Explain why MMM is privacy-safe (aggregate data); know GDPR/AVG basics for data inputs.</td><td>Signal-loss concerns</td></tr>
+<tr><td>10</td><td>Stakeholder translation</td><td>Turn outputs into decisions: one-page recommendation, dashboard, sensitivity to assumptions.</td><td>All briefs</td></tr>
+</tbody></table></div>
+</section>
+
+<section id="tools">
+<h2>3. Tool and learning map by concept</h2>
+<div class="tw"><table>
+<thead><tr><th>Concept</th><th>Tool and feature</th><th>Learn from</th><th>Deliverable that answers the question</th></tr></thead>
+<tbody>
+<tr><td>1 Budget scenarios</td><td>PyMC-Marketing <code>optimize_budget</code> with constraints; Meridian <code>BudgetOptimizer</code> <span class="tag syn">check current API</span></td><td><a href="https://developers.google.com/meridian/mmm">Meridian docs</a>, <a href="https://pymc-marketing.readthedocs.io/en/latest/guide/mmm/resources.html">PyMC-Marketing guide</a></td><td>Scenario table with intervals (demo 1 below)</td></tr>
+<tr><td>2 Response curves</td><td>Both libraries expose saturation curves; Robyn response plots</td><td>Same docs; <a href="https://towardsdatascience.com/mastering-marketing-mix-modelling-in-python-7bbfe31360f9/">Mastering MMM in Python</a></td><td>Response curve chart with current spend marker (demo 2)</td></tr>
+<tr><td>3 Triangulation</td><td>Meridian automated calibration; PyMC-Marketing lift-test calibration</td><td>Meridian docs; <a href="https://business.google.com/us/accelerate/announcements/meridian-updates/">Meridian updates</a></td><td>Prior vs posterior ROI chart (demo 3)</td></tr>
+<tr><td>4 Long-term / brand</td><td>Adstock parameters, time-varying coefficients (PyMC-Marketing Gaussian-process approximation)</td><td>PyMC-Marketing notebooks; <a href="https://arxiv.org/pdf/2408.07678">"Your MMM is Broken"</a></td><td>Decomposition chart: base vs media</td></tr>
+<tr><td>5 Priors/uncertainty</td><td>Prior predictive checks (ArviZ), posterior intervals</td><td>PyMC docs; PyMC-Marketing end-to-end <a href="https://www.pymc-marketing.io/en/0.11.0/notebooks/mmm/mmm_case_study.html">case study notebook</a></td><td>Interval plots, not point estimates</td></tr>
+<tr><td>6 Small-market design</td><td>National time series; Meridian geo models where regions exist</td><td>Practitioner conversations (networking track)</td><td>Design memo for tests</td></tr>
+<tr><td>7 Non-media drivers</td><td>Control variables in all three tools</td><td>Tool notebooks</td><td>Decomposition waterfall</td></tr>
+<tr><td>8 Governance</td><td>Holdout fit, diagnostics (R-hat, residuals)</td><td>Open-source MMM overview <a href="https://www.researchgate.net/publication/404064112_Open-Source_Media_and_Marketing_Mix_Modeling_Practice-Oriented_Overview_Challenges_Opportunities">paper</a></td><td>Model health checklist</td></tr>
+<tr><td>9 Privacy</td><td>n/a (aggregate inputs)</td><td>Forbes/Measured guides (vendor-biased)</td><td>One-slide explainer</td></tr>
+<tr><td>10 Translation</td><td>Dashboard (Looker Studio, Power BI, Streamlit)</td><td>Your portfolio project</td><td>One-page decision brief</td></tr>
+</tbody></table></div>
+
+<h3 style="margin-top:18px">Minimal code to answer "where should the next euro go?" <span class="tag syn">check current docs</span></h3>
+<pre><code># PyMC-Marketing (illustrative; verify against current docs)
+from pymc_marketing.mmm import MMM, GeometricAdstock, LogisticSaturation
+mmm = MMM(date_column="date", channel_columns=["tv","search","social","ctv"],
+          adstock=GeometricAdstock(l_max=8), saturation=LogisticSaturation(),
+          control_columns=["price","promo"], yearly_seasonality=2)
+mmm.fit(X, y)                                  # Bayesian fit
+mmm.add_lift_test_measurements(lift_df)        # calibrate with experiments
+mmm.optimize_budget(budget=1_000_000, num_periods=8)   # scenario/optimise</code></pre>
+<pre><code># Meridian (illustrative; verify against current docs)
+mmm = model.Meridian(input_data=data, model_spec=spec.ModelSpec())
+mmm.sample_prior(500); mmm.sample_posterior(n_chains=4, n_adapt=500, n_burnin=500, n_keep=1000)
+optimizer.BudgetOptimizer(mmm).optimize()</code></pre>
+</section>
+
+<section id="demos">
+<h2>3b. Demonstrations: client questions answered with analysis</h2>
+<p class="mut"><span class="tag syn">illustrative</span> All numbers below are made up to show the shape of the deliverable. They are not real client results.</p>
+
+<div class="grid">
+<div class="card">
+<h3>Demo 1: "If I move budget from TV to CTV, what happens?"</h3>
+<p class="mut">Move the slider. Each channel uses a saturating curve: revenue = a·(1−e^(−spend/k)).</p>
+<label>Shift from TV to CTV: <b id="sv">0</b>% of TV budget<input id="sl" type="range" min="0" max="50" value="0"></label>
+<p>TV: €<span id="tv">0</span>k · CTV: €<span id="ctv">0</span>k</p>
+<p class="big" id="delta">+€0k revenue</p>
+<p class="mut">Illustrative parameters: TV €400k at near-saturation, CTV €100k with headroom. In a real model, report this with a credible interval.</p>
+</div>
+
+<div class="card">
+<h3>Demo 2: "Is more spend on search worth it?"</h3>
+<svg viewBox="0 0 320 200" role="img" aria-label="Response curve with current spend marker">
+<line class="grd" x1="30" y1="170" x2="310" y2="170"/><line class="grd" x1="30" y1="20" x2="30" y2="170"/>
+<path d="M30,170 C90,60 160,40 310,32" fill="none" stroke="var(--acc)" stroke-width="2.5"/>
+<line x1="170" y1="40" x2="170" y2="170" stroke="var(--acc2)" stroke-dasharray="4 3"/>
+<circle cx="170" cy="40" r="4" fill="var(--acc2)"/>
+<text x="176" y="60">current spend</text><text x="176" y="74" class="m">flat part: low marginal ROI</text>
+<text x="34" y="190" class="m">spend →</text><text x="4" y="16" class="m">incremental revenue</text>
+</svg>
+<p class="mut">Answer: the curve is flattening at current spend, so extra euros return little; move budget to a channel still on the steep part.</p>
+</div>
+
+<div class="card">
+<h3>Demo 3: "Can we trust the ROI? (calibration)"</h3>
+<svg viewBox="0 0 320 170" role="img" aria-label="Prior versus posterior ROI distributions">
+<line class="ax" x1="20" y1="140" x2="310" y2="140"/>
+<path d="M20,140 C60,138 100,60 140,60 S220,138 300,140" fill="none" stroke="var(--mut)" stroke-width="2" stroke-dasharray="4 3"/>
+<path d="M120,140 C140,130 150,20 170,20 S200,130 220,140" fill="none" stroke="var(--acc)" stroke-width="2.5"/>
+<text x="24" y="158" class="m">ROI →</text>
+<text x="224" y="62" class="m">prior (wide)</text><text x="176" y="26">posterior after lift test (narrow)</text>
+</svg>
+<p class="mut">Answer: a lift test narrowed the plausible ROI range, so the recommendation is less risky.</p>
+</div>
+
+<div class="card">
+<h3>Demo 4: "What drove sales?" (decomposition)</h3>
+<svg viewBox="0 0 320 180" role="img" aria-label="Sales decomposition bars">
+<g font-size="11">
+<rect x="90" y="14" width="200" height="18" fill="var(--mut)"/><text x="4" y="27">Base</text><text x="296" y="27" class="m">58%</text>
+<rect x="90" y="42" width="55" height="18" fill="var(--acc)"/><text x="4" y="55">TV</text><text x="150" y="55" class="m">16%</text>
+<rect x="90" y="70" width="40" height="18" fill="var(--acc)"/><text x="4" y="83">Search</text><text x="135" y="83" class="m">11%</text>
+<rect x="90" y="98" width="25" height="18" fill="var(--acc)"/><text x="4" y="111">CTV</text><text x="120" y="111" class="m">7%</text>
+<rect x="90" y="126" width="22" height="18" fill="var(--acc2)"/><text x="4" y="139">Promo</text><text x="117" y="139" class="m">6%</text>
+<rect x="90" y="154" width="8" height="18" fill="var(--acc2)"/><text x="4" y="167">Price</text><text x="103" y="167" class="m">2%</text>
+</g></svg>
+<p class="mut">Answer: separates what media earned from what base, promo and price explain.</p>
+</div>
+</div>
+
+<h3 style="margin-top:22px">One-page decision brief template</h3>
+<ol>
+<li><strong>Question</strong> (client's words).</li>
+<li><strong>Answer</strong> in one sentence with an interval.</li>
+<li><strong>Evidence:</strong> response curve, calibration status, decomposition.</li>
+<li><strong>Scenarios:</strong> flat, +10%, −10%, with constraints.</li>
+<li><strong>Risks and next test:</strong> what experiment would reduce the uncertainty most.</li>
+</ol>
+</section>
+
+<section id="sched">
+<h2>Where it fits in the plan (replaces generic reading in weeks 2–4)</h2>
+<div class="tw"><table>
+<thead><tr><th>Week</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr></thead>
+<tbody>
+<tr><td>2 (12–16 Oct)</td><td>Read cases 1–3 (60m); log brief / method / outcome</td><td>Cases 4–6 (60m); extract patterns</td><td>Concepts 1–2 notes (45m) + Demo 1 rebuild in Python (45m)</td><td>Concept 3 + calibration notebook (90m)</td><td>Write the "brief patterns" one-pager</td></tr>
+<tr><td>3 (19–23 Oct)</td><td>Concept 4–5 reading (60m); prior predictive check (30m)</td><td>Meridian budget optimiser run (90m)</td><td>PyMC-Marketing optimiser run, compare (90m)</td><td>Concepts 6–7: design a national-time-series test memo (60m)</td><td>Build Demo 2 + 3 charts from your own model output</td></tr>
+<tr><td>4 (26–30 Oct)</td><td>Concept 8: governance checklist (60m)</td><td>Concept 9–10: privacy slide + decision brief (90m)</td><td>Mock client brief #1 answered end to end (90m)</td><td>Mock client brief #2, different channel mix (90m)</td><td>Self-review vs the template; ask a practitioner for feedback</td></tr>
+</tbody></table></div>
+<p class="mut">Weeks 5–6 portfolio project: pick one brief pattern (suggest "Where should the next euro go?") and deliver the full decision brief.</p>
+</section>
+
+<section id="src">
+<h2>Sources</h2>
+<ul class="mut">
+<li><a href="https://gaintheory.com/case-study/using-mmm-to-drive-recruitment-efficiency-for-a-national-public-sector-body/">Gain Theory: public sector recruitment</a></li>
+<li><a href="https://www.measured.com/faq/real-life-media-mix-modeling-mmm-examples-true-incrementality/">Measured: real-life MMM examples</a></li>
+<li><a href="https://cassandra.app/resources/mmm-case-study-13-in-conversions-with-the-same-budget-invested">Cassandra: +13% conversions case</a></li>
+<li><a href="https://www.quantzig.com/case-studies/marketing-mix-modeling-helps-banking-industry/">Quantzig: banking case</a></li>
+<li><a href="https://github.com/matthewkaran33/mmm-case-study">Everline Foods Meridian case (simulated data)</a></li>
+<li><a href="https://business.google.com/en-all/think/measurement/google-meridian-marketing-mix-modelling/">Think with Google: Meridian</a></li>
+<li><a href="https://pymc-marketing.readthedocs.io/en/latest/guide/mmm/resources.html">PyMC-Marketing resources</a></li>
+<li><a href="https://www.objectiveplatform.com/">Objective Platform</a></li>
+<li><a href="https://effie.nl/nieuws/gouden-effies-voor-albert-heijn-en-kruidvat-dit-zijn-de-winnaars-van-de-effie-awards-2025/">Effie NL 2025 winners</a> (no MMM-specific entry found)</li>
+</ul>
+</section>
+</main>
+<script>
+(function(){
+  var sl=document.getElementById('sl');
+  function resp(a,k,x){return a*(1-Math.exp(-x/k));}
+  var TV0=400,CTV0=100;
+  function tv(x){return resp(900,150,x);}      // near saturation at 400
+  function ctv(x){return resp(500,150,x);}     // headroom at 100
+  function upd(){
+    var p=+sl.value, move=TV0*p/100, a=TV0-move, b=CTV0+move;
+    var d=(tv(a)+ctv(b))-(tv(TV0)+ctv(CTV0));
+    document.getElementById('sv').textContent=p;
+    document.getElementById('tv').textContent=a.toFixed(0);
+    document.getElementById('ctv').textContent=b.toFixed(0);
+    document.getElementById('delta').textContent=(d>=0?'+':'')+'€'+d.toFixed(0)+'k revenue (illustrative)';
+  }
+  sl.addEventListener('input',upd);upd();
+})();
+</script>
+</body>
+</html>
