@@ -36,7 +36,7 @@ input[type=range]{width:100%}
 </style>
 </head>
 <body>
-<nav><div><a href="#a">Answer</a><a href="#cases">1 Case studies</a><a href="#concepts">2 Core concepts</a><a href="#tools">3 Tool map</a><a href="#demos">3b Demos</a><a href="#sched">Schedule</a><a href="#src">Sources</a></div></nav>
+<nav><div><a href="#a">Answer</a><a href="#cases">1 Case studies</a><a href="#concepts">2 Core concepts</a><a href="#tools">3 Tool map</a><a href="#demos">3b Demos</a><a href="#sched">Schedule</a><a href="#data">Data landscape</a><a href="#src">Sources</a></div></nav>
 <header>
 <h1>MMM Refresh Module: client briefs to senior skills</h1>
 <p class="mut">Built 4 Oct 2026 for the Oct–Nov plan. Tags: <span class="tag src">sourced</span> from a published page or talk, <span class="tag syn">synthesis</span> my judgement from common practice, not a cited fact.</p>
@@ -202,6 +202,68 @@ optimizer.BudgetOptimizer(mmm).optimize()</code></pre>
 <p class="mut">Weeks 5–6 portfolio project: pick one brief pattern (suggest "Where should the next euro go?") and deliver the full decision brief.</p>
 </section>
 
+<section id="data">
+<h2>Data landscape: sources, adoption, refresh and access (NL, Benelux, Germany)</h2>
+<div class="note"><strong>Evidence limit.</strong> I found no study that reports data sources, the traditional/digital/CRM split, refresh habits or data-access problems specifically for NL, Benelux or Germany. What follows is: <span class="tag src">sourced</span> general MMM guidance (mostly vendor blogs and US-centric surveys), <span class="tag syn">judgement</span> where I fill gaps from general practice. Check the judgement items with Dutch and German practitioners.</div>
+
+<h3>1. Typical data sources</h3>
+<div class="tw"><table>
+<thead><tr><th>Data set</th><th>Typical content</th><th>Usual owner (judgement)</th><th>Common issues</th></tr></thead>
+<tbody>
+<tr><td>Media spend and activity</td><td>Spend, impressions or GRPs by channel (TV, radio, print, OOH, digital), daily or weekly, about two years <span class="tag src">sourced</span></td><td>Media agency; marketing ops; platform exports</td><td>Different naming and formats per platform; agency versions disagree</td></tr>
+<tr><td>Business outcome</td><td>Sales, revenue, leads, sign-ups, from a CRM or similar system, daily or weekly <span class="tag src">sourced</span></td><td>Finance, BI/data team, CRM team</td><td>Definitions (gross vs net, returns); channel splits (online vs store)</td></tr>
+<tr><td>Price and promotion</td><td>Prices, discounts, promo periods <span class="tag src">sourced</span></td><td>Commercial / category / trade teams</td><td>Promo calendars held in spreadsheets</td></tr>
+<tr><td>External factors</td><td>Seasonality, holidays, competitor activity, economic indicators <span class="tag src">sourced</span></td><td>Analyst / public sources / vendors</td><td>Holiday calendars differ by country and German state</td></tr>
+<tr><td>Organic and owned</td><td>Email, SMS, SEO, web analytics <span class="tag src">sourced</span></td><td>CRM and web analytics teams</td><td>Tracking gaps from consent rules</td></tr>
+<tr><td>Audience and panel data</td><td>TV audience, OOH audience, retail panel, brand tracking <span class="tag syn">judgement</span>: in NL bodies such as SKO (TV) and NOBO (OOH), in Germany AGF/GfK, with Nielsen/Kantar panels across markets. I did not confirm these in search.</td><td>Agency, market research, vendor</td><td>Licensing cost; reach metrics differ from spend</td></tr>
+</tbody></table></div>
+<p class="mut">History: most sources say at least two years at weekly or monthly grain, and the German guides add that pipelines should be automated.</p>
+
+<h3>2. Traditional vs digital vs CRM share</h3>
+<p>No published split exists, so I won't invent one. Two sourced facts bear on it: Nielsen's 2025 survey says only 23% of European marketers measure spend across both digital and traditional channels, and about 70% of MMM effort is reported to go on data preparation rather than analysis <span class="tag src">sourced, vendor claims</span>.</p>
+<div class="tw"><table>
+<thead><tr><th>Client type <span class="tag syn">judgement</span></th><th>Traditional / offline</th><th>Digital</th><th>CRM / first-party</th></tr></thead>
+<tbody>
+<tr><td>FMCG / grocery retail</td><td>High (TV, OOH, print, promo, retailer data)</td><td>Medium</td><td>Medium (loyalty data)</td></tr>
+<tr><td>E-commerce / marketplaces</td><td>Low to medium</td><td>High</td><td>High</td></tr>
+<tr><td>Telco / utilities / banking</td><td>Medium to high</td><td>Medium</td><td>High (subscriptions, products)</td></tr>
+<tr><td>Travel / automotive</td><td>Medium</td><td>High</td><td>Medium (leads, bookings)</td></tr>
+</tbody></table></div>
+<p class="mut">To replace this with evidence: in your first three projects, count the model columns by group and record it in the tracker.</p>
+
+<h3>3. Is MMM a regular process at large and small clients?</h3>
+<p><strong>Not universal.</strong> Reported adoption rises steeply with marketing spend; these figures are from a vendor-published, US-centric study (<a href="https://presenc.ai/research/mmm-adoption-rate-2026">presenc.ai</a>), so treat them as direction only:</p>
+<div id="adbars" style="margin:8px 0"></div>
+<ul>
+<li>B2B mid-market and enterprise: 31% adoption versus 14% for companies under $10M ARR.</li>
+<li>One practitioner post advises small e-commerce companies to skip MMM and focus on simpler measurement <span class="tag src">sourced, Japan e-commerce, one opinion</span>.</li>
+<li>Implication for you: large NL/DE advertisers are the natural MMM buyers; SMBs mostly buy lighter products (platform dashboards, simple regressions, open-source starter builds). <span class="tag syn">judgement</span></li>
+</ul>
+
+<h3>4. How long are outputs used, and when is a refresh needed?</h3>
+<ul>
+<li><strong>Cadence:</strong> quarterly or semi-annual is the common default; monthly suits e-commerce and retail with fast promo cycles and good data; modern automated pipelines can refresh weekly or monthly <span class="tag src">sourced</span>.</li>
+<li><strong>Shelf life:</strong> models degrade as the market changes, so refreshes add data, recalibrate and compare coefficients with the previous version; large shifts in coefficients signal real market change to investigate <span class="tag src">sourced</span>.</li>
+<li><strong>Refresh triggers</strong> <span class="tag syn">judgement</span>: new or paused channels, big budget reallocation, pricing or promo strategy change, acquisition or new market, a market shock, new data (e.g. a lift test result), the annual planning cycle. A Monks article lists "5 factors" for when to refresh; I could not read it, so check it yourself: <a href="https://www.monks.com/articles/these-5-factors-will-tell-you-when-refresh-your-marketing-mix-model">Monks</a>.</li>
+<li><strong>Usual rhythm</strong> <span class="tag syn">judgement</span>: one large annual build tied to budget planning, plus quarterly refreshes; clients without automated data often stay at semi-annual or annual.</li>
+</ul>
+
+<h3>5. Who holds the data, and what goes wrong</h3>
+<div class="grid">
+<div class="card"><h3>Who typically has access <span class="tag syn">judgement</span></h3><p>Several teams each hold a piece: media agency (spend, plans), marketing/performance team (platform exports), finance (revenue, margin), BI/CRM team (sales, customers), commercial/trade team (price, promo), market research (brand tracking). The consultant usually gets data through a single client lead who has to collect from all of them.</p></div>
+<div class="card"><h3>Sourced challenges</h3><p>Data sits in separate platforms and consolidation is slow and error-prone; campaigns across 15–30 platforms with inconsistent schemas; about 70% of effort goes to data prep; agency media inputs are hard to verify; long collection timelines; privacy rules reduce granularity; regional data gives more accurate models than national data. <span class="tag src">sourced</span> German guides add: data quality decides everything, automate pipelines, and budget for integration, possibly a data integration engineer, especially for the Mittelstand.</p></div>
+<div class="card"><h3>Market-specific points <span class="tag syn">judgement</span></h3><p><strong>NL:</strong> small country, so mostly national models; agency-held media data is common. <strong>Belgium:</strong> two language markets, so TV and media data may need splitting by region. <strong>Germany:</strong> 16 federal states allow regional modelling and larger sample sizes, but also a more fragmented data landscape; German-language documentation expected. <strong>All:</strong> GDPR consent limits web data; euro as a common currency helps.</p></div>
+</div>
+
+<h3>Data request checklist and plan additions</h3>
+<ol>
+<li>(60m, plan week 1 Wed, Slot D) Turn the table in section 1 into your own data request template with owner, grain, history and sign-off.</li>
+<li>(30m, week 2 Slot C) Ask 3 practitioners which of the five challenges costs most time; log answers.</li>
+<li>(90m, week 3) Run a data-readiness check on your portfolio data: gaps, naming, definitions, outliers.</li>
+<li>(30m, each refresh case) Record: data sources, grain, who supplied it, days lost cleaning, refresh cadence.</li>
+</ol>
+</section>
+
 <section id="src">
 <h2>Sources</h2>
 <ul class="mut">
@@ -234,6 +296,11 @@ optimizer.BudgetOptimizer(mmm).optimize()</code></pre>
   }
   sl.addEventListener('input',upd);upd();
 })();
+</script>
+<script>
+(function(){var d=[['Over $100M',89],['$25–100M',72],['$10–25M',54],['$2–10M',28],['Under $2M',11]],h='';
+d.forEach(function(r){h+='<div style="display:flex;align-items:center;gap:8px;font-size:.85rem;margin:3px 0"><span style="width:90px;color:var(--mut)">'+r[0]+'</span><i style="display:block;height:10px;border-radius:2px;background:var(--acc);width:'+r[1]*0.6+'%"></i><span>'+r[1]+'%</span></div>'});
+var e=document.getElementById('adbars');if(e)e.innerHTML=h;})();
 </script>
 </body>
 </html>
